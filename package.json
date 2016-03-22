@@ -1,0 +1,22 @@
+{
+  "name": "purejs-onepage-scroll",
+  "description": "purejs-onepage-scroll",
+  "version": "1.2.2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marciojc/purejs-onepage-scroll"
+  },
+  "main": "onepagescroll.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "peerDependencies": {
+
+  },
+  "dependencies": {
+
+  },
+  "devDependencies": {
+
+  }
+}
