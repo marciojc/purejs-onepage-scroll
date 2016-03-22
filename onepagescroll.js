@@ -32,7 +32,7 @@
 	 *
 	 * ========================================================== */
 
-	function onePageScroll(element, options) {
+	return function onePageScroll(element, options) {
 
 	  var defaults = {
 		    	sectionContainer: "section",
@@ -47,7 +47,7 @@
 		    	responsiveFallback: false
 		    },
 		    _root = this,
-		    settings = Object.extend({}, defaults, options),
+		    settings = _.merge(defaults, options),
 		    el = document.querySelector(element),
 		    sections = document.querySelectorAll(settings.sectionContainer),
 		    total = sections.length,
@@ -504,6 +504,8 @@
 			}
 		}
 
+  
+
 	  this.init();
 	}
 
@@ -515,31 +517,7 @@
 	 /*  Function by John Resig to replicate extend functionality */
 	 /*-----------------------------------------------------------*/
 
-	 Object.extend = function(orig){
-	   if ( orig == null )
-	     return orig;
 
-	   for ( var i = 1; i < arguments.length; i++ ) {
-	     var obj = arguments[i];
-	     if ( obj != null ) {
-	       for ( var prop in obj ) {
-	         var getter = obj.__lookupGetter__( prop ),
-	             setter = obj.__lookupSetter__( prop );
-
-	         if ( getter || setter ) {
-	           if ( getter )
-	             orig.__defineGetter__( prop, getter );
-	           if ( setter )
-	             orig.__defineSetter__( prop, setter );
-	         } else {
-	           orig[ prop ] = obj[ prop ];
-	         }
-	       }
-	     }
-	   }
-
-	   return orig;
-	 };
 
 
 	 // Close UMD module
